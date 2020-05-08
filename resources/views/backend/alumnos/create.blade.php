@@ -11,7 +11,7 @@ Alumnos · Registrar
                <center> <h1>Registro de Alumnos </h1> </center>
                 <div class="product-payment-inner-st">
                     <ul id="myTabedu1" class="tab-review-design">
-                        <li class="active"><a href="#description">Información del alumnos</a></li>
+                        <li class="active"><a href="#description">Información del alumno</a></li>
                     
                     </ul>
                     <div id="myTabContent" class="tab-content custom-product-edit">
