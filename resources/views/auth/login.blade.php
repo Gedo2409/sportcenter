@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('backend.layouts.login')
 
 @section('content')
 <div class="limiter">

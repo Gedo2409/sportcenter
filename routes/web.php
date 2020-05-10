@@ -18,4 +18,5 @@ Auth::routes();
 
 
 require_once "backend_routes.php";
+require_once "frontend_routes.php";
 
