@@ -36,7 +36,7 @@ class AlumnosController extends Controller
 	public function show($id)
 	{
 
-		return view('backend.alumnos.show');
+		return view('backend.alumnos.show', ['alumnos' => Alumno::find($id)]);
 		//return view('backend.alumnos.show', ['alumnos' => Alumno::find($id)]);
     }
 

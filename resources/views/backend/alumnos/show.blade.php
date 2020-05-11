@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 @section('title')
-Alumnos
+Alumnos - {{$alumnos->Nombre}}
 @endsection
 @section('content')
 
@@ -14,37 +14,29 @@ Alumnos
                             </div>
                             <div class="profile-details-hr">
                                 <div class="row">
+                                    <div>
+                                   <center><h1>TARJETA DEL ALUMNO</h1></center>
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
-                                            <p><b>Name</b><br /> Fly Zend</p>
+                                            <p><b>Name </b><br /> {{$alumnos->Nombre}}</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
-                                            <p><b>Department</b><br /> CSE</p>
+                                            <p><b>Edad</b><br /> {{$alumnos->Edad}}</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
-                                        <div class="address-hr">
-                                            <p><b>Email ID</b><br /> fly@gmail.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
-                                        <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
-                                            <p><b>Phone</b><br /> +01962067309</p>
-                                        </div>
-                                    </div>
-                                </div>
+                             
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="address-hr">
-                                            <p><b>Address</b><br /> E104, catn-2, Chandlodia Ahmedabad Gujarat, UK.</p>
+                                            <p><b>Telefono</b><br /> {{$alumnos->Telefono}}</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                              {{--<div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="address-hr">
                                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -63,9 +55,85 @@ Alumnos
                                             <h3>600</h3>
                                         </div>
                                     </div>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
+                        <div class="row"> <hr> </div>
+                            {{--DATOS NUTRICIONALES --}}
+                            <div class="profile-info-inner">
+                                <div class="profile-img">
+                                    <img src="img/profile/1.jpg" alt="" />
+                                </div>
+                                <div class="profile-details-hr">
+                                    <div class="row">
+                                        <div>
+                                       <center><h1>MEDIDAS DE ENTRADA</h1></center>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                            <div class="address-hr">
+                                                <p><b>Peso </b><br /> {{$alumnos->Peso}}</p>
+                                            </div>
+                                            <div class="address-hr">
+                                                <p><b>Estatura </b><br /> {{$alumnos->Estatura}}</p>
+                                            </div>
+                                            <div class="address-hr">
+                                                <p><b>Musculo </b><br /> {{$alumnos->Musculo}}</p>
+                                            </div>
+                                            <div class="address-hr">
+                                                <p><b>Grasa viceral </b><br /> {{$alumnos->Grasavic}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                            <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
+                                                <p><b>Grasa Corporal</b><br /> {{$alumnos->Grasacorp}}</p>
+                                            </div>
+                                            
+                                            <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
+                                                <p><b>RM</b><br /> {{$alumnos ->RM}}</p>
+                                            </div> 
+                                            
+                                            <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
+                                                <p><b>VMI</b><br /> {{$alumnos ->VMI}}</p>
+                                            </div>
+                                            
+                                            <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
+                                                <p><b>VMI</b><br /> {{$alumnos ->cintura}}</p>
+                                            </div> 
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                 
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="address-hr">
+                                                <p><b>Fecha de registro</b><br /> {{$alumnos->created_at}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {{--<div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <div class="address-hr">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <h3>500</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <div class="address-hr">
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                                <h3>900</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <div class="address-hr">
+                                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                                <h3>600</h3>
+                                            </div>
+                                        </div>
+                                    </div>--}}
+                                </div>
+                            </div>
+
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                         <div class="product-payment-inner-st res-mg-t-30 analysis-progrebar-ctn">

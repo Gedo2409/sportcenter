@@ -44,7 +44,8 @@ Alumnos · Todos
                                    {{--  <p class="dp">Computer Science</p>
                                     <p class="dp-ag"><b>Age:</b> 20 Years</p> --}}
                                     <center>
-                                        <button type="button" class="btn btn-primary waves-effect waves-light">Más información</button>
+
+                                       <a href="{{ route('alumnos.show', $c->id) }}"> <button type="button" class="btn btn-primary waves-effect waves-light">Más información</button></a>
                                         </center>
                                 </div>
                              
