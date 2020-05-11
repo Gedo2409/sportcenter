@@ -107,7 +107,7 @@ Alumnos - {{$alumnos->Nombre}}
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="address-hr">
-                                                <p><b>Fecha de registro</b><br /> {{$alumnos->created_at}}</p>
+                                                <p><b>Fecha de registro</b><br /> {{ $alumnos->created_at->format('d-m-Y')}} </p>
                                             </div>
                                         </div>
                                     </div>
