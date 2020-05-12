@@ -57,6 +57,7 @@
                     <nav class="mainmenu mobile-menu">
                         <ul>
                             <li class="active"><a href="{{ route('index') }}">Home</a></li>
+                            <li><a href="{{ route('backend.index') }}">Login</a></li>
                             
                            {{--<li><a href="{{ route('about') }}">About us</a></li>
                             <li><a href="{{ route('Schedule') }}">Schedule</a></li>

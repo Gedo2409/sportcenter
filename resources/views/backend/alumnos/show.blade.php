@@ -138,9 +138,10 @@ Alumnos - {{$alumnos->Nombre}}
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                         <div class="product-payment-inner-st res-mg-t-30 analysis-progrebar-ctn">
                             <ul id="myTabedu1" class="tab-review-design">
-                                <li class="active"><a href="#description">Activity</a></li>
-                                <li><a href="#reviews"> Biography</a></li>
-                                <li><a href="#INFORMATION">Update Details</a></li>
+                                <li class="active"><a href="#description">Avance</a></li>
+                                <li><a href="#reviews">Dietas</a></li>
+                                <li><a href="#INFORMATION">Registrar avance</a></li>
+                                <li><a href="#pagos">Registro de pagos</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit st-prf-pro">
                                 <div class="product-tab-list tab-pane fade active in" id="description">
@@ -311,9 +312,7 @@ Alumnos - {{$alumnos->Nombre}}
                                                         <div class="message">
                                                             <a class="message-author" href="#"> Karl Jordan </a>
                                                             <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
-                                                            <span class="message-content">
-																	Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
-																	</span>
+                                                         
                                                             <div class="m-t-md mg-t-10">
                                                                 <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
                                                                 <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
@@ -374,9 +373,7 @@ Alumnos - {{$alumnos->Nombre}}
                                                         <div class="message">
                                                             <a class="message-author" href="#"> Karl Jordan </a>
                                                             <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
-                                                            <span class="message-content">
-																	Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
-																	</span>
+                                                           
                                                             <div class="m-t-md mg-t-10">
                                                                 <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
                                                                 <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
@@ -418,6 +415,7 @@ Alumnos - {{$alumnos->Nombre}}
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="product-tab-list tab-pane fade" id="INFORMATION">
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -425,39 +423,28 @@ Alumnos - {{$alumnos->Nombre}}
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <input name="number" type="text" class="form-control" placeholder="First Name">
+                                                            <input name="number" type="text" class="form-control" placeholder="Peso">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Last Name">
+                                                            <input type="text" class="form-control" placeholder="Estatura">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Address">
+                                                            <input type="text" class="form-control" placeholder="Musculo">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Date of Birth">
+                                                            <input type="text" class="form-control" placeholder="Grasa viceral">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Department">
+                                                            <input type="text" class="form-control" placeholder="Grasa Corporal">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" placeholder="Pincode">
+                                                            <input type="number" class="form-control" placeholder="VMI">
                                                         </div>
-                                                        <div class="file-upload-inner ts-forms">
-                                                            <div class="input prepend-big-btn">
-                                                                <label class="icon-right" for="prepend-big-btn">
-																		<i class="fa fa-download"></i>
-																	</label>
-                                                                <div class="file-button">
-                                                                    Browse
-                                                                    <input type="file" onchange="document.getElementById('prepend-big-btn').value = this.value;">
-                                                                </div>
-                                                                <input type="text" id="prepend-big-btn" placeholder="no file selected">
-                                                            </div>
-                                                        </div>
+                                                    
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group sm-res-mg-15 tbpf-res-mg-15">
-                                                            <input type="text" class="form-control" placeholder="Description">
+                                                            <input type="text" class="form-control" placeholder="RM">
                                                         </div>
                                                         <div class="form-group">
                                                             <select class="form-control">
@@ -515,13 +502,109 @@ Alumnos - {{$alumnos->Nombre}}
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div class="product-tab-list tab-pane fade" id="pagos">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                  <tr class="bg-primary">
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Fecha</th>
+                                                    <th scope="col">Monto</th>
+                                                    <th scope="col">Codigo de alumno</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>  
+                                              <center>                                          
+                                           <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="modal-area-button">
+                                                        <a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Nuevo Pago</a>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                              </center>       
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
+        <div id="PrimaryModalalert" class="modal modal-edu-general fullwidth-popup-InformationproModal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-close-area modal-close-df">
+                        <a class="close" data-dismiss="modal" href="#"><i class="fa fa-close"></i></a>
+                    </div>
+                    <div class="modal-body">
+                        <span class="educate-icon educate-info modal-check-pro information-icon-pro"> </span>
+                   
+                       
+
+                        <h2><b>Nuevo pago de:  </b>{{$alumnos->Nombre}}</h2>
+                        <p>Registre aqui el pago de su alumno</p> 
+                    </div>
+                        <center>
+                  
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                <label>Clave de alumno</label>
+                                <input name="number" type="text" class="form-control"  readonly="readonly" placeholder="Peso" value="{{$alumnos->id}}">
+                            </div>
 
 
+
+                            <div class="form-group">
+                                <label>Alumno</label>
+                                <input name="number" type="text" class="form-control"  readonly="readonly" placeholder="Peso" value="{{$alumnos->Nombre}}">
+                            </div>
+                            
+
+                            <div class="form-group">
+                                <label>Monto</label>
+                                <input type="text" class="form-control">
+                            </div>
+                                                                                                                                
+                        </div>
+                    
+                        </center>
+
+
+                    <div class="modal-footer info-md">
+                        <a data-dismiss="modal" href="#">Guardar</a>
+                        <a href="#">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection
