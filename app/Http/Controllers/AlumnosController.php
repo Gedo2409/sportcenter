@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Alumno;
+
 
 
 class AlumnosController extends Controller
@@ -65,6 +67,7 @@ class AlumnosController extends Controller
 			$b->save();
 		}
 		//return view('backend.alumnos.index');	
+		Alert::success('Exito!', 'Alumno Registrado');  
 		return view('backend.alumnos.index',['alumnos'=> Alumno::all()]);	
     }
 

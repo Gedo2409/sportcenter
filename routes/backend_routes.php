@@ -1,5 +1,8 @@
 <?php
 
+use RealRashid\SweetAlert\Facades\Alert;
+
+
 Route::prefix('backend')->group(function () {
     //El route::resource simplifica las operaciones de index, create, store, show, edit, update y destroy
     //Cualquier otra operación declarada aparte de estas, se declara en la parte inferior

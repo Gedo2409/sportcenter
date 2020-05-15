@@ -20,5 +20,6 @@ Backend
                <img  src="img/Red and Blue Vectors Teacher Thank You Card.png" alt="" />
         </div>
     </div>
+   
 </div>
 @endsection

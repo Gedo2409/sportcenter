@@ -55,5 +55,6 @@ Alumnos · Todos
                        @endforeach
                 </div> 
             </div>
+            @include('sweetalert::alert')
         </div> 
 @endsection
