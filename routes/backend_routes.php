@@ -9,12 +9,17 @@ Route::prefix('backend')->group(function () {
     Route::resource('/', 'DashboardController');
 
     Route::resource('/alumnos', 'AlumnosController');
-    Route::resource('/Pagos', 'PagosController');
+    Route::resource('/Pagos', 'PagoController');
     Route::resource('/Eventos', 'EventosController');
-    Route::resource('/Blog', 'BlogController');
+    Route::resource('/Blog', 'BlogController'); 
+
+    //Esta ruta ayudara a guardar el avance desde la vista del alumno. 
+    //   Route::get('/alumnos/{id}', ['uses' => 'AlumnosController', 'as' => 'alumnos.pagoalumno' ]);
+
+
 
     //Cualquier otra operación declarada aparte de estas, se declara en la parte inferior
-
+   
     //Vista de las fotos y formulario para servicio
     Route::get('/servicios/fotos/{id}', ['uses' => 'ServicioController@fotos', 'as' => 'servicios.fotos']);
     //Envio de datos para registro de fotos del servicio

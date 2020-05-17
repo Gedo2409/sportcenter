@@ -537,7 +537,16 @@ Alumnos - {{$alumnos->Nombre}}
                                                   </tr>
                                                 </tbody>
                                               </table>  
-                                             
+                                              <center>                                          
+                                           <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="modal-area-button">
+                                                        <a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Nuevo Pago</a>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                              </center>       
                                         </div>
                                     </div>
                                 </div>
@@ -550,5 +559,52 @@ Alumnos - {{$alumnos->Nombre}}
             
         </div>
 
-       
+        <div id="PrimaryModalalert" class="modal modal-edu-general fullwidth-popup-InformationproModal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-close-area modal-close-df">
+                        <a class="close" data-dismiss="modal" href="#"><i class="fa fa-close"></i></a>
+                    </div>
+                    <div class="modal-body">
+                        <span class="educate-icon educate-info modal-check-pro information-icon-pro"> </span>
+                   
+                       
+
+                        <h2><b>Nuevo pago de:  </b>{{$alumnos->Nombre}}</h2>
+                        <p>Registre aqui el pago de su alumno</p> 
+                    </div>
+                        <center>
+                  
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                <label>Clave de alumno</label>
+                                <input name="number" type="text" class="form-control"  readonly="readonly" placeholder="Peso" value="{{$alumnos->id}}">
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label>Alumno</label>
+                                <input name="number" type="text" class="form-control"  readonly="readonly" placeholder="Peso" value="{{$alumnos->Nombre}}">
+                            </div>
+                            
+
+                            <div class="form-group">
+                                <label>Monto</label>
+                                <input type="text" class="form-control">
+                            </div>
+                                                                                                                                
+                        </div>
+                    
+                        </center>
+
+
+                    <div class="modal-footer info-md">
+                        <a data-dismiss="modal" href="#">Guardar</a>
+                        <a href="#">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection

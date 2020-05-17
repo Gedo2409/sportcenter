@@ -56,8 +56,9 @@
                 <div class="nav-menu">
                     <nav class="mainmenu mobile-menu">
                         <ul>
-                            <li class="active"><a href="{{ route('index') }}">Home</a></li>
-                            <li><a href="{{ route('backend.index') }}">Login</a></li>
+                            <li class="active"><a href="{{ route('front.index') }}">Home</a></li>
+                            {{--<li><a href="{{ route('backend.index') }}">Login</a></li>--}}
+            
                             
                            {{--<li><a href="{{ route('about') }}">About us</a></li>
                             <li><a href="{{ route('Schedule') }}">Schedule</a></li>
@@ -171,7 +172,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
                 </div>
             </div>
         </div>
-        @include('sweetalert::alert')
+       
        
     </footer>
 

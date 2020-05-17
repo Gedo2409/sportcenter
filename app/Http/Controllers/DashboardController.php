@@ -17,7 +17,7 @@ class DashboardController extends Controller
   }
   public function index()
   {
-    Alert::success('Bienvenido Administrador', 'Success Message');  
+  
     return view('backend.index');
   }
 }
