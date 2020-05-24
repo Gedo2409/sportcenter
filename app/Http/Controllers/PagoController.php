@@ -21,7 +21,15 @@ class PagoController extends Controller
      */
     public function index()
     {
-        return view('backend.pagos.index',['pagos'=>Pago::all()]);
+        $pagos=DB::table('pagos')
+        ->join('alumnos', 'alumnos.id', '=', 'pagos.id')
+        ->select('pagos.id','pagos.monto', 'alumnos.nombre as NombredeAlumno')
+        ->get();
+
+        
+
+        //dd($pagos);
+        return view('backend.Pagos.index',['pagos'=>Pago::all()]);
         
     }
 
@@ -32,7 +40,17 @@ class PagoController extends Controller
      */
     public function create()
     {
-        //
+
+        $pagos=DB::table('pagos')
+        ->join('alumnos', 'alumnos.id', '=', 'pagos.id')
+        ->select('pagos.id','pagos.monto', 'alumnos.nombre as NombredeAlumno')
+        ->get();
+        $alumnos=Alumno::all();
+        return view('backend.Pagos.create', compact('alumnos'));
+
+
+        /**$pagos=DB::table('pagos')
+        ->join('alumnos', 'alumnos.id', '=', 'pagos.alumno.id')**/
     }
 
     /**
@@ -43,18 +61,31 @@ class PagoController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-		//dd( $input );
 
+       
+
+        
+
+        //dd($pagos);
+        
+
+
+        $input = $request->all();
+   
+       
 		$rules = [
 			//'Foto' => 'mimes:jpeg,png,jpg',// max 150kb
-			'Nombre' => 'required'
+
+            'alumno_id' => 'required'
+            
+            
 		
 			//hacer validacion para tipo de datos
 
 		];
 		$validator = Validator::make($input, $rules);
 		if ($validator->fails()) {
+         
 			return redirect()->back()
 			->withErrors($validator)
 			->withInput();
@@ -63,8 +94,8 @@ class PagoController extends Controller
 			$b->save();
 		}
 		//return view('backend.alumnos.index');	
-		Alert::success('Exito!', 'Alumno Registrado');  
-		return view('backend.pagos.index',['pagos'=> Pago::all()]);	
+		Alert::success('Exito!', 'Pago Registrado con Exito');  
+		return view('backend.Pagos.index');	
     }
 
     /**

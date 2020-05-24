@@ -3,58 +3,52 @@
 Alumnos · Todos
 @endsection
 @section('content')
-{{--<div class="contacts-area mg-b-15">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30">
-                            <div class="student-img">
-                                <img src="img/student/1.jpg" alt="" />
-                            </div>
-                            <div class="student-dtl">
-                                <h2>Alexam Angles</h2>
-                                <p class="dp">Computer Science</p>
-                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
-                            </div>
+
+
+
+
+
+        <div class="container">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-uppercase" style="width:360px !important">Registro de <b>pagos</b></h2>
                         </div>
                     </div>
-                 
-                  
-                
-                </div>
-                
-            </div>
-        </div>--}}
-
-        <div class="contacts-area mg-b-15">
-            <center><h1>Registro de Pagos</h1></center>
-            <div class="container-fluid">
-                <div class="row">
-                
-                        {{-- @foreach ($pagos as $c)
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="student-inner-std res-mg-b-30">
-                                <div class="student-img">
-                                    <img src="img/student/1.jpg" alt="" />
-                                </div>
-                                <div class="student-dtl">
-                                    <h2>NOMBRE: {{$->Nombre}}</h2>
-                                    <p class="dp">Edad: {{$c->Edad}} años</p>
-
-                                   <p class="dp">Telefono: {{$c->Telefono}}</p>
-                                
-                                    <center>
-
-                                       <a href="{{ route('alumnos.show', $c->id) }}"> <button type="button" class="btn btn-primary waves-effect waves-light">Más información</button></a>
-                                        </center>
-                                </div>
-                             
-                            </div>
-                            <div><hr></div>
-                        </div> 
-                       @endforeach--}}
                 </div> 
+                <table id="example" class=" table table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th class="col-1">id</th>
+                            <th>Nombre</th>
+                            {{--<th>Descripción</th>--}}
+                            <th>Monto</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($pagos as $c)
+                        <tr>
+                            <td class="col-1">{{ $c->id }}</td>
+                            <td class="col-1">{{ $c->alumno_id }}</td>
+                            {{--<td>{!!$c->Descripcion!!}</td>--}}
+                            <td>{{$c->monto}}</td>
+                          
+                           
+                        
+                            <td class="text-center col-1">
+                                <form action="{{ route('Pagos.destroy', $c->id) }}" method="POST" class="no-margin">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="_method" value="DELETE" />
+                                        <button type="submit" class="btn" style="background-color:transparent"><i class="fas fa-trash-alt fa-2x text-danger"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
             @include('sweetalert::alert')
-        </div> 
+        </div>
 @endsection

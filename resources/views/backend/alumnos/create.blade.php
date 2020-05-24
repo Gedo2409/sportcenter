@@ -37,7 +37,7 @@ Alumnos · Registrar
                                                             <input name="finish" id="finish" type="text" class="form-control" placeholder="Date of Birth">
                                                         </div> --}} 
                                                         <div class="form-group">
-                                                            <input name="Estatura" type="int" value="{{ old('Estatura') }}" maxlength="20" class="form-control" placeholder="Estatura">
+                                                            <input name="Estatura" type="number" value="{{ old('Estatura') }}" maxlength="20" class="form-control" placeholder="Estatura">
                                                         </div>
                                                       {{--<div class="form-group alert-up-pd">
                                                             <div class="dz-message needsclick download-custom">
