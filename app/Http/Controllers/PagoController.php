@@ -26,7 +26,7 @@ class PagoController extends Controller
         ->select('pagos.id','pagos.monto', 'alumnos.nombre as NombredeAlumno')
         ->get();
 
-        
+        $pagos = Pago::all();
 
         //dd($pagos);
         return view('backend.Pagos.index',['pagos'=>Pago::all()]);
@@ -47,6 +47,7 @@ class PagoController extends Controller
         ->get();
         $alumnos=Alumno::all();
         return view('backend.Pagos.create', compact('alumnos'));
+       
 
 
         /**$pagos=DB::table('pagos')
@@ -95,7 +96,7 @@ class PagoController extends Controller
 		}
 		//return view('backend.alumnos.index');	
 		Alert::success('Exito!', 'Pago Registrado con Exito');  
-		return view('backend.Pagos.index');	
+        return view('backend.Pagos.index',['pagos'=>Pago::all()]);
     }
 
     /**
@@ -140,6 +141,10 @@ class PagoController extends Controller
      */
     public function destroy($id)
     {
-        //
+      /*  Alumno::where('id', $id)->delete();
+		$s=Alumno::where('id',$id)->get();
+		$b =Pago::find($id);
+		$b->delete();
+		return view('backend.alumnos.index',['alumnos'=>alumnos::all()]);*/
     }
 }

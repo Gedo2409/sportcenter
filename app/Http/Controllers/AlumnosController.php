@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Alumno;
+use App\Pago;
 
 
 
@@ -69,6 +70,18 @@ class AlumnosController extends Controller
 		//return view('backend.alumnos.index');	
 		Alert::success('Exito!', 'Alumno Registrado');  
 		return view('backend.alumnos.index',['alumnos'=> Alumno::all()]);	
+	}
+	
+
+	public function destroy($id)
+    {
+
+		
+        Alumno::where('id', $id)->delete();
+		$s=Alumno::where('id',$id)->get();
+		$b =Pago::find($id);
+		$b->delete();
+		return view('backend.alumnos.index',['alumnos'=>Alumnos::all()]);
     }
 
 

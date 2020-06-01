@@ -111,6 +111,7 @@ Alumnos - {{$alumnos->Nombre}}
                                             </div>
                                         </div>
                                     </div>
+
                                   {{--<div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                             <div class="address-hr">
@@ -132,7 +133,15 @@ Alumnos - {{$alumnos->Nombre}}
                                         </div>
                                     </div>--}}
                                 </div>
-                            </div>
+                            </div>  
+                            
+                            <div>
+                                <form action="{{ route('alumnos.destroy', $alumnos->id) }}" method="POST" class="no-margin">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="_method" value="DELETE" />
+                                    <button type="submit" class="btn" style="background-color:transparent">Borrar</button>
+                            </form>
+                                </div>
 
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -549,6 +558,8 @@ Alumnos - {{$alumnos->Nombre}}
             </div>
             
         </div>
+
+        
 
        
 @endsection
