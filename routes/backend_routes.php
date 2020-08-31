@@ -10,6 +10,9 @@ Route::prefix('backend')->group(function () {
 
     Route::resource('/alumnos', 'AlumnosController');
     Route::resource('/Pagos', 'PagoController');
+    Route::resource('/Avance', 'AvanceController');
+    Route::resource('/Dietas', 'DietasController');
+    Route::resource('/Blog', 'BlogController');
     Route::resource('/Eventos', 'EventosController');
     Route::resource('/Blog', 'BlogController'); 
 

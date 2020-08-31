@@ -129,8 +129,8 @@
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"> <i class="fa fa-bar-chart"></i> <span class="mini-click-non">Avances</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Courses" href="all-courses.html"><span class="mini-sub-pro">Ver avances</span></a></li>
-                                <li><a title="Add Courses" href="add-course.html"><span class="mini-sub-pro">Añadir avance</span></a></li>
+                                <li><a title="All Courses" href="{{ route('Avance.index') }}"><span class="mini-sub-pro">Ver avances</span></a></li>
+                                <li><a title="Add Courses" href="{{ route('Avance.create') }}"><span class="mini-sub-pro">Añadir avance</span></a></li>
                                {{-- <li><a title="Edit Courses" href="edit-course.html"><span class="mini-sub-pro">Edit Course</span></a></li>
                                 <li><a title="Courses Profile" href="course-info.html"><span class="mini-sub-pro">Courses Info</span></a></li>
                                 <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>--}}
