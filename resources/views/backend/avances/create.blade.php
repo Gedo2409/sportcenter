@@ -26,7 +26,7 @@ Alumnos · Registrar
                                                             <label>Nombre del Alumno</label> 
                                                            <select name="alumno_id" class="form-control"> 
                                                           
-                                                            <option value="">Seleccione al alumno</option>
+                                                            <option value="">Seleccione al alumnos</option>
                                                             @foreach ($alumnos as $alumno)
                                                                <option value="{{$alumno->id}}">{{$alumno->Nombre}}</option>
                                                             @endforeach                                                        
