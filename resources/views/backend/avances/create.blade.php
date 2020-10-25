@@ -105,7 +105,7 @@ Alumnos · Registrar
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="payment-adress">
-                                                            <button type="submit" class="btn btn-primary waves-effect waves-light">REGISTRAR ALUMNO</button>
+                                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Registrar Avance</button>
                                                         </div>
                                                     </div>
                                                 </div>
