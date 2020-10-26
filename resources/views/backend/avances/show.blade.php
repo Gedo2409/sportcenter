@@ -6,7 +6,7 @@ Detalle de avance
 
 
 <div class="row">                                                        
-    <center> <h3> <b>Ficha de {{$avances->Alumno->Nombre}}</b></h3> </center>
+    <center> <h3> <b>Ficha de {{$alumno->Nombre}}</b></h3> </center>
 
 
 
@@ -28,7 +28,7 @@ Detalle de avance
                 <thead>
                    
                     <tr>
-                        <th class="col-1">id</th>
+                        
                         <th>Peso</th>
                         {{--<th>Descripción</th>--}}
                         <th>Estatura</th>
@@ -43,19 +43,23 @@ Detalle de avance
                     </tr>
                 </thead>
                 <tbody>
-                    
+                  @foreach ($alumno->avance as $aa )
+                      
+                
+                        
+                   
                     <tr>
-                        <td class="col-1"></td>
+                        <td class="col-1">{{$aa->Peso}}</td>
+                    
+                        <td class="col-1">{{$aa->Estatura}}</td>
                         
-                        <td class="col-1"></td>
+                        <td>{{$aa->Musculo}}</td>
+                        <td>{{$aa->Grasavic}}</td>
+                        <td>{{$aa->Grasacorp}}</td>
+                        <td>{{$aa->RM}}</td>
+                        <td>{{$aa->VMI}}</td>
+                        <td>{{$aa->cintura}}</td>
                         
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                        
                     
                         <td class="text-center col-1">
@@ -66,7 +70,7 @@ Detalle de avance
                             </form>
                         </td>
                     </tr>
-                  
+                    @endforeach
                 </tbody>
             </table>
         </div>

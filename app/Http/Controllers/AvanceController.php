@@ -23,17 +23,17 @@ class AvanceController extends Controller
     public function index()
     {
 
-
+        
         $avance=DB::table('avances')
         ->join('alumnos', 'alumnos.id', '=', 'avances.id')
         ->select('avances.id', 'alumnos.nombre as NombredeAlumno')
         ->get();
-
-        $avance = Avance::all();
-   
-        //dd($pagos);
-        return view('backend.avances.index',['avances'=>Avance::all()]);
         
+        $avance = Avance::all();
+        
+        //dd($pagos);
+        return view('backend.avances.index',['alumnos'=>Alumno::all()]);
+        $alumnos=Alumno::all();
     }
 
     /**
@@ -64,7 +64,7 @@ class AvanceController extends Controller
     {
           //dd($pagos);
         
-
+            
 
           $input = $request->all();
    
@@ -114,7 +114,7 @@ class AvanceController extends Controller
 
         $avance = Avance::all();
         	
-        return view('backend.avances.show', ['avances' => Avance::find($id)]);
+        return view('backend.avances.show', ['alumno' => Alumno::find($id)]);
        
         //
     }

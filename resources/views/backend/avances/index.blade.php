@@ -30,14 +30,14 @@ Avances · Todos
             <center><h1>Avance de alumnos</h1></center>
             <div class="container-fluid">
                 <div class="row">
-                        @foreach ($avances as $c)
+                        @foreach ($alumnos as $c)
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                             <div class="student-inner-std res-mg-b-30">
                                 <div class="student-img">
                                     <img src="img/student/1.jpg" alt="" />
                                 </div>
                                 <div class="student-dtl">
-                                    <h2>NOMBRE: {{$c->Alumno->Nombre}}</h2>
+                                    <h2>NOMBRE: {{$c->Nombre}}</h2>
                                 
 
                               

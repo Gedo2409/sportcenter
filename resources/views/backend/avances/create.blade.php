@@ -123,5 +123,6 @@ Alumnos · Registrar
             </div>
         </div>
     </div>
+    @include('sweetalert::alert')
 </div>
 @endsection

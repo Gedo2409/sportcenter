@@ -12,6 +12,9 @@ class Alumno extends Model
     protected $fillable = ['id','Nombre', 'Peso', 'Edad', 'Estatura', 'Musculo', 'Grasavic', 'Grasacorp', 'RM', 'VMI', 'cintura', 'Telefono'];
     protected $hidden = ['created_at', 'updated_at',];
 
-    
+    public function avance(){
+
+        return $this->hasMany('App\Avance');
+    }
 
 }
