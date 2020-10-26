@@ -28,7 +28,7 @@ Detalle de avance
                 <thead>
                    
                     <tr>
-                        
+                        <th>Fecha del registro</th>
                         <th>Peso</th>
                         {{--<th>Descripción</th>--}}
                         <th>Estatura</th>
@@ -49,6 +49,7 @@ Detalle de avance
                         
                    
                     <tr>
+                        <td>{{$aa->created_at->format('d-m-Y') }}</td>
                         <td class="col-1">{{$aa->Peso}}</td>
                     
                         <td class="col-1">{{$aa->Estatura}}</td>
