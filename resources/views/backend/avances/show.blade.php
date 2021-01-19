@@ -83,7 +83,7 @@ Detalle de avance
     <div>
         <hr>
     </div>
-
+        <center><h1>Graficas de avance</h1></center>
 
 
 </div>

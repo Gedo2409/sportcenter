@@ -92,7 +92,13 @@ class AvanceController extends Controller
           //return view('backend.alumnos.index');	
           Alert::success('Exito!', 'Pago Registrado con Exito'); 
           //return view('backend.avances.index',['avances'=>Pago::all()]);
-          return view('backend.avances.index');	
+          //return view('backend.avances.index'); Este es el bueno
+
+        /**
+         * La siguiente linea es la que sustituyo a -> return view('backend.avances.index'); 
+         * debido a un error que sugrio despues de haber hecho el cambio para que las tablas de avence se mostraran.
+         * En caso de errores en la sección de avances consultar la linea anterior. */
+          return view('backend.avances.index',['alumnos'=>Alumno::all()]);	
     }
 
     /**
