@@ -3,7 +3,37 @@
 Detalle de avance
 @endsection
 @section('content')
+<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+         {{--GRAFICAS DE GOOGLE--}}
+         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(
+           
+        [
+            @foreach ($alumno->avance as $aa )  
+          ['Fecha', 'Peso', 'Grasa'],
+          [{{$aa->created_at->format('m') }}, {{$aa->Peso}},  {{$aa->Grasavic}}],
+          @endforeach
+        ]
+        
+        );
+
+        var options = {
+          title: 'Avances de este alumno',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+         
 
 <div class="row">                                                        
     <center> <h3> <b>Ficha de {{$alumno->Nombre}}</b></h3> </center>
@@ -74,20 +104,30 @@ Detalle de avance
                     @endforeach
                 </tbody>
             </table>
+            <center>
+                <div id="curve_chart" style="width: 900px; height: 500px"></div>
+                <p><b>Peso actual </b><br /> {{$aa->Peso}}</p>
+                <p><b>Peso incio </b><br /> {{$alumno->Peso}}</p>
+                
+                
+             
+          
+            <a href="{{ route('Avance.edit', $alumno->id)  }}"> <button type="button" class="btn btn-primary waves-effect waves-light">Más información</button></a>
+        </center> 
+            </center>
+    </div>
+    
+
         </div>
         @include('sweetalert::alert')
 
             
-
+            
     </div>
     <div>
         <hr>
     </div>
-        <center><h1>Graficas de avance</h1></center>
-
-
-</div>
-
+   
 
 
 

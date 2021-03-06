@@ -90,7 +90,7 @@ class AvanceController extends Controller
               $b->save();
           }
           //return view('backend.alumnos.index');	
-          Alert::success('Exito!', 'Pago Registrado con Exito'); 
+          Alert::success('Exito!', 'Avance Registrado con Exito'); 
           //return view('backend.avances.index',['avances'=>Pago::all()]);
           //return view('backend.avances.index'); Este es el bueno
 
@@ -122,6 +122,7 @@ class AvanceController extends Controller
         	
         return view('backend.avances.show', ['alumno' => Alumno::find($id)]);
        
+
         //
     }
 
@@ -133,7 +134,15 @@ class AvanceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $avance=DB::table('avances')
+        ->join('alumnos', 'alumnos.id', '=', 'avances.id')
+        ->select('avances.id', 'alumnos.nombre as NombredeAlumno')
+        ->get();
+
+        $avance = Avance::all();
+
+        
+    return view('backend.avances.edit', ['alumno' => Alumno::find($id)]);
     }
 
     /**

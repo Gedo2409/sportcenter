@@ -15,6 +15,7 @@ Route::prefix('backend')->group(function () {
     Route::resource('/Blog', 'BlogController');
     Route::resource('/Eventos', 'EventosController');
     Route::resource('/Blog', 'BlogController'); 
+    
 
     //Esta ruta ayudara a guardar el avance desde la vista del alumno. 
     //   Route::get('/alumnos/{id}', ['uses' => 'AlumnosController', 'as' => 'alumnos.pagoalumno' ]);

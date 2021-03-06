@@ -64,6 +64,13 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+         {{--GRAFICAS DE GOOGLE--}}
+         <script src="https://www.gstatic.com/charts/loader.js"></script>
+         <script>
+           google.charts.load('current', {packages: ['corechart']});
+           google.charts.setOnLoadCallback(drawChart);
+           ...
+         </script>
 </head>
 
 <body>
