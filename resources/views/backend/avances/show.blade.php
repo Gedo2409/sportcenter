@@ -15,8 +15,8 @@ Detalle de avance
            
         [
             @foreach ($alumno->avance as $aa )  
-          ['Fecha', 'Peso', 'Grasa'],
-          [{{$aa->created_at->format('m') }}, {{$aa->Peso}},  {{$aa->Grasavic}}],
+          ['-', 'Peso', 'Grasa'],
+          ['{{$aa->created_at->format('d-m-y') }}', {{$aa->Peso}},  {{$aa->Grasavic}}],
           @endforeach
         ]
         
