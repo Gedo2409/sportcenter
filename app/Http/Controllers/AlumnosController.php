@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Alumno;
 use App\Pago;
-
+use App\Avance;
 
 
 class AlumnosController extends Controller
@@ -75,13 +75,15 @@ class AlumnosController extends Controller
 
 	public function destroy($id)
     {
-
-		
-        Alumno::where('id', $id)->delete();
-		$s=Alumno::where('id',$id)->get();
-		$b =Pago::find($id);
+		Avance::where('alumno_id',$id)->delete();
+		$s=Avance::where('alumno_id',$id)->get();
+		Pago::where('alumno_id',$id)->delete();
+		$s=Pago::where('alumno_id',$id)->get();
+		$b =Alumno::find($id);
 		$b->delete();
-		return view('backend.alumnos.index',['alumnos'=>Alumnos::all()]);
+		Alert::success('Exito!', 'Alumno Eliminado');  
+		return view('backend.alumnos.index',['alumnos'=> Alumno::all()]);
+
     }
 
 

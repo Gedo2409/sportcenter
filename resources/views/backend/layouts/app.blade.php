@@ -399,7 +399,7 @@
                                    
                                   
                                     
-                                          <center> <h3> <b>PANEL DE ADMNISTRACIÓN</b></h3> </center>
+                                          <center> <h3> <b>PANEL DE ADMNISTRACIÓN </b></h3> </center>
                                             
                                            
                                     
@@ -421,7 +421,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2020. Hecho por Ruux</p>
+                            <p>Copyright © 2020 </p>
                         </div>
                     </div>
                 </div>
